@@ -29,7 +29,7 @@ public class DanhSachSPController {
 		List<SanPhamEntity> list = query.list();
 		model.addAttribute("sanpham", list);
 		return "SanPham/DanhSachSpsauDN";
-//		HIHI
+//		HIHI123
 
 	}
 }

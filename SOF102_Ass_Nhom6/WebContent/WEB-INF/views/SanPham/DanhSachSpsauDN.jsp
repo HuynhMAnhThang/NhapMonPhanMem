@@ -7,6 +7,7 @@
 <base href="${pageContext.servletContext.contextPath}/">
 <meta charset="utf-8">
 <title>Danh Sách Sản Phẩm</title>
+
 <style type="text/css">
 .layout {
 	width: 1080px;
@@ -138,6 +139,7 @@ a {
 </style>
 </head>
 <body>
+<%-- Dũng đẹp trai --%>>
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="#">Đăng xuất</a> <a href="#">Đơn hàng của tôi</a>

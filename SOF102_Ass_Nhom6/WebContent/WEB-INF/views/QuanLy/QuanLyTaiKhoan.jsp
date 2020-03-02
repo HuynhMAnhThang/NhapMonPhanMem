@@ -130,7 +130,7 @@
 	<div class="layout">
 		<form action="" class="timKiem">
 			<a href="#">
-				<img class="logo" alt="logo" src="img/logo.png" height="60px" width="60px" align="center">
+				<img class="logo" alt="logo" src="img/logo.png" height="60px" width="90px" align="center">
 			</a>
 			<input class="inputTK" type="text" placeholder="Tìm kiếm">
 			<span class="acout" style="font-size:20px;cursor:pointer" onclick="openNav()"> 

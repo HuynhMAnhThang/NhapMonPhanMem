@@ -30,4 +30,19 @@ public class QuanlyController {
 		model.addAttribute("nguoidung", list);
 		return "QuanLy/QuanLyTaiKhoan";
 	}
+	
+	 
+	  @SuppressWarnings("unchecked")
+	  
+	  @RequestMapping("QuanLySanPham") public String listTK(ModelMap model) {
+	  Session session = factory.getCurrentSession(); String hql =
+	  "FROM SanPhamEntity"; Query query = session.createQuery(hql);
+	  List<SanPhamEntity> list = query.list(); model.addAttribute("sanpham",
+	  list); return "QuanLy/QuanLySanPham"; }
+	 
 }
+
+
+
+
+	

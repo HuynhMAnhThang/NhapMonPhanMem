@@ -6,7 +6,7 @@
 <head>
 <base href="${pageContext.servletContext.contextPath}/">
 <meta charset="utf-8">
-<title>Quản lý tài khoản</title>
+<title>Danh Sách Sản Phẩm</title>
 <style type="text/css">
 .layout {
 	width: 1080px;

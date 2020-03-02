@@ -5,7 +5,7 @@
 <html>
 <head>
 	<base href="${pageContext.servletContext.contextPath}/">
-	<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
 	<title>Quản lý tài khoản</title>
 	<style type="text/css">
 	 	.layout{

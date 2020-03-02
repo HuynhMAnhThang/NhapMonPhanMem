@@ -139,7 +139,7 @@ a {
 </style>
 </head>
 <body>
-<%-- Dũng đẹp trai --%>>
+
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="#">Đăng xuất</a> <a href="#">Đơn hàng của tôi</a>

@@ -10,25 +10,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import nhom6.entity.NguoiDungEntity;
+import nhom6.entity.SanPhamEntity;
 
 @Transactional
 @Controller
-@RequestMapping("/QuanLy/")
+@RequestMapping("/SanPham/")
 
-public class QuanlyController {
+public class DanhSachSPController {
 	@Autowired
 	SessionFactory factory;
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping("QuanLyTaiKhoan")
-	public String listTK(ModelMap model) {
+	@RequestMapping("DanhSachSpsauDN")
+	public String DanhSachSauDN(ModelMap model) {
 		Session session = factory.getCurrentSession();
-		String hql = "FROM NguoiDungEntity";
+		String hql = "FROM SanPhamEntity";
 		Query query = session.createQuery(hql);
-		List<NguoiDungEntity> list = query.list();
-		model.addAttribute("nguoidung", list);
-		return "QuanLy/QuanLyTaiKhoan";
+		List<SanPhamEntity> list = query.list();
+		model.addAttribute("sanpham", list);
+		return "SanPham/DanhSachSpsauDN";
+
 	}
 }

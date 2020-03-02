@@ -66,7 +66,7 @@
  			padding-left: 880px;
 	 	}
 	 	button{
-	 		width: 70px;
+	 		width: 100px;
 			height: 25px;
 			background-color: orange;
 			border-radius: 5px;

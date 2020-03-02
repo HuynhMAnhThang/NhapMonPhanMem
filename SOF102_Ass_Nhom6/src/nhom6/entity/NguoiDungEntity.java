@@ -21,8 +21,8 @@ public class NguoiDungEntity {
 	private String chucVu;
 	private String dienThoai;
 	
-//	@OneToMany(mappedBy = "NguoiDungEntity", fetch = FetchType.EAGER)
-//	private Collection<HoaDonEntity> hoadon;
+	@OneToMany(mappedBy = "nguoidungentity", fetch = FetchType.EAGER)
+	private Collection<HoaDonEntity> hoadon;
 	
 	public Integer getMaNguoiDung() {
 			return maNguoiDung;
@@ -64,13 +64,13 @@ public class NguoiDungEntity {
 		this.dienThoai = dienThoai;
 	}
 	
-//	public Collection<HoaDonEntity> getHoaDon(){
-//		return hoadon;
-//	}
-//	
-//	public void setHoaDon(Collection<HoaDonEntity> hoadon) {
-//		this.hoadon = hoadon;
-//	}
+	public Collection<HoaDonEntity> getHoaDon(){
+		return hoadon;
+	}
+	
+	public void setHoaDon(Collection<HoaDonEntity> hoadon) {
+		this.hoadon = hoadon;
+	}
 
 	public String getChucVu() {
 		return chucVu;

@@ -17,8 +17,8 @@ public class LoaiSanPhamEntity {
 	private Integer maLoaiSanPham;
 	private String tenLoaiSanPham;
 	
-//	@OneToMany(mappedBy = "LoaiSanPhamEntity", fetch = FetchType.EAGER)
-//	private Collection<SanPhamEntity> sanpham;
+	@OneToMany(mappedBy = "loaisanphamentity", fetch = FetchType.EAGER)
+	private Collection<SanPhamEntity> sanpham;
 
 	public Integer getMaLoaiSanPham() {
 		return maLoaiSanPham;
@@ -36,11 +36,11 @@ public class LoaiSanPhamEntity {
 		this.tenLoaiSanPham = tenLoaiSanPham;
 	}
 	
-//	public Collection<SanPhamEntity> getSanPham(){
-//		return sanpham;
-//	}
-//	
-//	public void setSanPham(Collection<SanPhamEntity> sanpham) {
-//		this.sanpham = sanpham;
-//	}
+	public Collection<SanPhamEntity> getSanPham(){
+		return sanpham;
+	}
+	
+	public void setSanPham(Collection<SanPhamEntity> sanpham) {
+		this.sanpham = sanpham;
+	}
 }

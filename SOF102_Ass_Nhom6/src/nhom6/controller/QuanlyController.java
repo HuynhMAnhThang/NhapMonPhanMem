@@ -1,5 +1,7 @@
 package nhom6.controller;
 
+import java.util.List;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

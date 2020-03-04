@@ -6,8 +6,7 @@
 <head>
 <base href="${pageContext.servletContext.contextPath}/">
 <meta charset="utf-8">
-<title>Danh Sách Sản Phẩm</title>
-
+<title>Quản lý tài khoản</title>
 <style type="text/css">
 .layout {
 	width: 1080px;
@@ -74,9 +73,14 @@ table {
 	margin: 0 auto;
 }
 
+.Xoa {
+	padding-bottom: 10px;
+	padding-left: 880px;
+}
+
 button {
-	width: 150px;
-	height: 55px;
+	width: 70px;
+	height: 25px;
 	background-color: orange;
 	border-radius: 5px;
 	border: 1px;
@@ -133,42 +137,57 @@ a {
 		font-size: 18px;
 	}
 }
+tr th{
+text-align: center;
+}
 </style>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">Đăng xuất</a> <a href="#">Đơn hàng của tôi</a>
+		<a href="#">Đăng xuất</a> 
+		<a href="QuanLy/QuanLyTaiKhoan.htm">Quản Lý Tài Khoản</a> 
+		<a href="QuanLy/QuanlySanPham.htm">Quản Lý Sản Phẩm</a>
 	</div>
 	<div class="layout">
-		<form action="" class="timKiem">
-			<a href="#"> <img class="logo" alt="logo" src="img/logo.png"
-				height="60px" width="60px" align="center"></a> <input
-				class="inputTK" type="text" placeholder="Tìm kiếm"> <a
-				href="#"><button class="btGioHang">Giỏ hàng</button></a> <span
-				onclick="openNav()"> <img alt="" class="acout"
-				src="img/dangnhap.png" align="center"> Xin chào
+		<form action="" class="timKiem" style="padding-left: 100px;">
+			<a href="#"> <img onclick="openNav()" class="logo" alt="logo" src="img/logo.png"
+				height="60px" width="90px" align="center">
+			</a> <input class="inputTK" type="text" placeholder="Tìm kiếm"> <span
+				class="acout" style="font-size: 20px; cursor: pointer"
+				onclick="openNav()"> <img src="img/dangnhap.png"  style="width: 40px;height: 40px;"> Xin chào
 			</span>
 		</form>
-		<h1>Danh Sách Sản Phẩm</h1>
+		<h1>QUẢN LÝ SẢN PHẨM</h1>
 		<form action="">
-			<table>
-				<tr class="ds1">
-					<th class="chu">Tên Sản Phẩm</th>
-					<th class="chu">Mô tả</th>
-					<th class="chu">Giá</th>
-					<th class="chu">Lựa Chọn</th>
+			<div class="Xoa">
+				<button class="btXoa">Xóa</button>
+			</div>
+			<table class="table table-hover">
+				<tr style="text-align: center;">
+
+					<th>Mã sản phẩm</th>
+					<th>Tên sản phẩm</th>
+					<th>Giá</th>
+					<th>Số Lượng</th>
+					<th>Mô tả</th>
+					<th>Sửa đổi thông tin</th>
+					<th>Lựa Chọn</th>
 				</tr>
 				<c:forEach var="a" items="${sanpham}">
 					<tr>
-						<td class="tennguoidung">${a.tenSanPham}</td>
-						<td>${a.moTa}</td>
+						<td class="tennguoidung">${a.maSanPham}</td>
+						<td>${a.tenSanPham}</td>
 						<td>${a.donGia}</td>
+						<td>${a.soLuong}</td>
+						<td>${a.moTa}</td>
 
-						<td style="text-align: center;"><a href="#"><button
-									class="btthem">Thêm Vào Giỏ Hàng</button></a></td>
-
+						<td style="text-align: center;">
+						<a href="#"> <button class="btCapNhat" style="width: 100px;">Cập nhật</button></a></td>
+						<td style="magin:0 auto;"><input class="checkbox"
+							type="checkbox"></td>
 					</tr>
 				</c:forEach>
 			</table>

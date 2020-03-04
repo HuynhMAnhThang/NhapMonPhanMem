@@ -20,14 +20,30 @@ public class HoadonController {
 	@Autowired
 	SessionFactory factory;
 	
-	@SuppressWarnings("unchecked")
+//	@SuppressWarnings("unchecked")
+//	@RequestMapping("DonHangCuaToi")
+//	public String listDH(ModelMap model) {
+//		Session session = factory.getCurrentSession();
+//		String hql = "FROM HoaDonChiTietEntity";
+//		Query query = session.createQuery(hql);
+//		List<HoaDonChiTietEntity> list = query.list();
+//		model.addAttribute("HDCT", list);
+//		return "DonHang/DonHangCuaToi";
+//	}
+	
 	@RequestMapping("DonHangCuaToi")
-	public String listDH(ModelMap model) {
+	public String index(ModelMap model) {
+		model.addAttribute("HDCT", new HoaDonChiTietEntity());
+		model.addAttribute("HDCTs", getHoaDonChiTiets());
+		return "DonHang/DonHangCuaToi";
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<HoaDonChiTietEntity> getHoaDonChiTiets() {
 		Session session = factory.getCurrentSession();
 		String hql = "FROM HoaDonChiTietEntity";
 		Query query = session.createQuery(hql);
 		List<HoaDonChiTietEntity> list = query.list();
-		model.addAttribute("HDCT", list);
-		return "DonHang/DonHangCuaToi";
+		return list;
 	}
 }

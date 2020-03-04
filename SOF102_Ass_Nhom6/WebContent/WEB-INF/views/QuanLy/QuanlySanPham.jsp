@@ -142,7 +142,7 @@
 		<h1>QUẢN LÝ Sản phẩm</h1>
 		<form action="">
 			<div class="Xoa">
-				<button class="btXoa">Xóa</button>		
+				<button class="btXoa">Xóa.</button>		
 			</div>		
 			<table class="table">
 				<tr style="text-align: center;">

@@ -16,19 +16,25 @@ import nhom6.entity.NguoiDungEntity;
 @Transactional
 @Controller
 @RequestMapping("/QuanLy/")
+
 public class QuanlyController {
 	@Autowired
 	SessionFactory factory;
-	
-	@SuppressWarnings("unchecked")
+
 	@RequestMapping("QuanLyTaiKhoan")
 	public String listTK(ModelMap model) {
+		model.addAttribute("nguoidung", new NguoiDungEntity());
+		model.addAttribute("nguoidungs", getNguoiDungs());
+		return "QuanLy/QuanLyTaiKhoan";
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<NguoiDungEntity> getNguoiDungs() {
 		Session session = factory.getCurrentSession();
 		String hql = "FROM NguoiDungEntity";
 		Query query = session.createQuery(hql);
 		List<NguoiDungEntity> list = query.list();
-		model.addAttribute("nguoidung", list);
-		return "QuanLy/QuanLyTaiKhoan";
+		return list;
 	}
 	
 	 

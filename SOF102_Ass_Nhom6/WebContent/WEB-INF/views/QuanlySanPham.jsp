@@ -66,7 +66,7 @@
  			padding-left: 880px;
 	 	}
 	 	button{
-	 		width: 100px;
+	 		width: 70px;
 			height: 25px;
 			background-color: orange;
 			border-radius: 5px;
@@ -124,43 +124,44 @@
 <body>
 	<div id="mySidenav" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="#">Đăng xuất</a>
-	  <a href="#">Đơn hàng của tôi</a>
+	 <a href="#">Đăng Xuất</a>
+
+  <a href="#">Quản Lý Tài Khoản</a>
+  <a href="#">Quản Lý Sản Phẩm</a>
 	</div>
 	<div class="layout">
 		<form action="" class="timKiem">
 			<a href="#">
-<<<<<<< HEAD
 				<img class="logo" alt="logo" src="img/logo.png" height="60px" width="90px" align="center">
-=======
-				<img class="logo" alt="logo" src="img/logo.png" height="80px" width="80px" align="center">
->>>>>>> branch 'master' of https://github.com/HuynhMAnhThang/NhapMonPhanMem.git
 			</a>
 			<input class="inputTK" type="text" placeholder="Tìm kiếm">
 			<span class="acout" style="font-size:20px;cursor:pointer" onclick="openNav()"> 
 				<img alt="" class="acout" src="img/dangnhap.png" align="center"> Xin chào
 			</span>
 		</form>
-		<h1>QUẢN LÝ TÀI KHOẢN</h1>
+		<h1>QUẢN LÝ Sản phẩm</h1>
 		<form action="">
 			<div class="Xoa">
 				<button class="btXoa">Xóa</button>		
 			</div>		
-			<table>
-				<tr>
-					<th>Tên tài khoản</th>
-					<th>Chức vụ</th>
-					<th>Tên đăng nhập</th>
-					<th>Số điện thoại</th>
-					<th>Sửa đổi thông tin</th>
-					<th>Lựa chọn</th>
-				</tr>
-				<c:forEach var="a" items="${nguoidungs}">
+			<table class="table">
+				<tr style="text-align: center;">
+                 
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                         <th>Mô tả</th>
+                        <th>Sửa đổi thông tin</th>
+                        <th>Lựa Chọn </th>
+                    </tr>
+				<c:forEach var="a" items="${sanpham}">
 					<tr>
-						<td class="tennguoidung">${a.tenNguoiDung}</td>
-						<td>${a.chucVu}</td>
-						<td>${a.taiKhoan}</td>
-						<td>${a.dienThoai}</td>
+						<td class="tennguoidung">${a.maSanPham}</td>
+						<td>${a.tenSanPham}</td>
+						<td>${a.donGia}</td>
+						<td>${a.soLuong}</td>
+						<td>${a.moTa}</td>
 						<td style="text-align: center;">
 							<a href="#"><button class="btCapNhat">Cập nhật</button></a>
 						</td>

@@ -63,12 +63,26 @@
 	 	}	
 	 	.Xoa{
  			padding-bottom: 10px;
- 			padding-left: 880px;
+ 			padding-left: 870px;
 	 	}
 	 	button{
 	 		width: 100px;
 			height: 25px;
 			background-color: orange;
+			border-radius: 5px;
+			border: 1px;
+	 	}
+	 	button:hover{
+	 		width: 100px;
+			height: 25px;
+			background-color: skyblue;
+			border-radius: 5px;
+			border: 1px;
+	 	}
+	 	.btnXoa:hover{	 	
+	 		width: 100px;
+			height: 25px;
+			background-color: gray;
 			border-radius: 5px;
 			border: 1px;
 	 	}
@@ -139,8 +153,9 @@
 		</form>
 		<h1>QUẢN LÝ TÀI KHOẢN</h1>
 		<form action="">
+			${message})
 			<div class="Xoa">
-				<button class="btXoa">Xóa</button>		
+				<button name="btXoa" class="btnXoa">Xóa</button>		
 			</div>		
 			<table>
 				<tr>
@@ -161,7 +176,9 @@
 							<a href="#"><button class="btCapNhat">Cập nhật</button></a>
 						</td>
 						<td style="text-align: center;">
-							<input class="checkbox" type="checkbox">
+							<a href="">
+								<input name="checkbox" class="cbox" type="checkbox">
+							</a>
 						</td>
 					</tr>
 				</c:forEach>

@@ -137,7 +137,7 @@
 		</form>
 		<h1>ĐƠN HÀNG ĐÃ THANH TOÁN</h1>
 		<form action="">				
-			<table>
+			<table id="table">
 				<tr>
 					<th>Stt</th>
 					<th>Tên sản phẩm</th>
@@ -147,18 +147,20 @@
 					<th>Thành tiền</th>
 					<th>Lựa chọn</th>
 				</tr>
-				<c:forEach var="b" items="${HDCT}">
-<!-- 					<tr> -->
-<!-- 						<td style="text-align: center;"></td> -->
-<!-- 						<td style="text-align: center;"></td> -->
-<!-- 						<td style="text-align: center;"></td> -->
-<%-- 						<td style="text-align: center;">${b.donGia} đ</td> --%>
-<%-- 						<td style="text-align: center;">${b.soLuong}</td> --%>
-<%-- 						<td style="text-align: center;">${b.donGia * b.soLuong} đ</td> --%>
-<!-- 						<td style="text-align: center;"> -->
-<!-- 							<input class="checkbox" type="checkbox"> -->
-<!-- 						</td> -->
-<!-- 					</tr> -->
+				<c:forEach var="b" items="${HDCTs}">
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;"></td>
+<%-- 						<td style="text-align: center;">${b.sanphamentity.tenSanPham}</td> --%>
+<%-- 						<td style="text-align: center;">${b.sanphamentity.moTa}</td> --%>
+						<td style="text-align: center;">${b.donGia} đ</td>
+						<td style="text-align: center;">${b.soLuong}</td>
+						<td style="text-align: center;">${b.donGia * b.soLuong} đ</td>
+						<td style="text-align: center;">
+							<input class="checkbox" type="checkbox">
+						</td>
+					</tr>
 				</c:forEach>
 <!-- 				<tr> -->
 <!-- 					<td style="text-align: center;">1</td> -->
@@ -174,7 +176,7 @@
 			</table>
 			<hr>
  			<div class="thanhToan">
- 				Tổng tiền đã thanh toán:<span>12</span> $ 
+ 				Tổng tiền đã thanh toán:<span id="val"></span> đ
  				<button class="btXoa">Xóa</button>
  			</div>
 		</form>
@@ -186,6 +188,11 @@
 		
 		function closeNav() {
 		  document.getElementById("mySidenav").style.width = "0";
+		}
+		var table = document.getElementById("table"), sumVal;
+		for (var i = 0; i < table.rows.length; i++) {
+			sumval = sumval + parseInt(table.rows[i].cells[5].innerHTML);
+			document.getElementById("val").innerHTML = sumval;
 		}
 	</script>
 </body>

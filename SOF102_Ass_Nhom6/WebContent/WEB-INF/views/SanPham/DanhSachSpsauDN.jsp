@@ -148,9 +148,9 @@ a {
 		<form action="" class="timKiem">
 			<a href="#"> <img class="logo" alt="logo" src="img/logo.png"
 				height="60px" width="60px" align="center"></a> <input
-				class="inputTK" type="text" placeholder="Tìm kiếm"><span
-				class="acout" style="font-size: 20px; cursor: pointer"
-				onclick="openNav()"> <img alt="" class="acout"
+				class="inputTK" type="text" placeholder="Tìm kiếm"> 
+				<a href="#"><button class="btGioHang">Giỏ hàng</button></a>
+				<span onclick="openNav()"> <img alt="" class="acout"
 				src="img/dangnhap.png" align="center"> Xin chào </span>
 		</form>
 		<h1>Danh Sách Sản Phẩm</h1>

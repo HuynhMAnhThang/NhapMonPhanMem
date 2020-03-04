@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javafx.scene.control.CheckBox;
 import nhom6.entity.NguoiDungEntity;
+import nhom6.entity.SanPhamEntity;
 
 @Transactional
 @Controller
@@ -75,4 +76,22 @@ public class QuanlyController {
 //		modle.addAttribute("nguoidungs", getNguoiDungs());
 //		return "QuanLy/QuanLyTaiKhoan";
 //	}
+
+	 
+	  @SuppressWarnings("unchecked")
+	  @RequestMapping("QuanlySanPham") 
+	  public String listSP(ModelMap model) {
+		  Session session = factory.getCurrentSession(); 
+		  String hql = "FROM SanPhamEntity"; 
+		  Query query = session.createQuery(hql);
+		  List<SanPhamEntity> list = query.list(); 
+		  model.addAttribute("sanpham",list); 
+		  return "QuanLy/QuanlySanPham";
+	  }
+
 }
+
+
+
+
+	

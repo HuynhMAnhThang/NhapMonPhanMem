@@ -163,7 +163,7 @@
 						<td>${a.soLuong}</td>
 						<td>${a.moTa}</td>
 						<td style="text-align: center;">
-							<a href="#"><button class="btCapNhat">Cập nhật</button></a>
+							<a href="#"><button class="btCapNhat">Cập nhật.</button></a>
 						</td>
 						<td style="text-align: center;">
 							<input class="checkbox" type="checkbox">

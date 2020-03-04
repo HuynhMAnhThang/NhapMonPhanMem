@@ -20,12 +20,13 @@ public class DanhSachSPController {
 	@Autowired
 	SessionFactory factory;
 
-	@SuppressWarnings("unchecked")
+
 	@RequestMapping("DanhSachSpsauDN")
 	public String DanhSachSauDN(ModelMap model) {
 		Session session = factory.getCurrentSession();
 		String hql = "FROM SanPhamEntity";
 		Query query = session.createQuery(hql);
+		@SuppressWarnings("unchecked")
 		List<SanPhamEntity> list = query.list();
 		model.addAttribute("sanpham", list);
 		return "SanPham/DanhSachSpsauDN";

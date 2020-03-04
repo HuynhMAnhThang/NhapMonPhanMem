@@ -158,10 +158,7 @@ a {
 </style>
 </head>
 <body>
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">Đăng xuất</a> <a href="#">Đơn hàng của tôi</a>
-	</div>
+
 	<div class="layout">
 		<form action="" class="timKiem">
 			<a href="#"><img alt="logo" src="img/logo.png" height="60px"
@@ -171,10 +168,11 @@ a {
 				style="font-size: 20px; cursor: pointer"> <img alt=""
 				class="acout" src="img/dangnhap.png" align="center">
 
-			</span> <a href="#">Đăng Nhập</a>&nbsp; <a href="#">Đăng Ký</a>
+			</span> <a href="dangnhap.jsp">Đăng Nhập</a>&nbsp; 
+			<a href="DangKy/dangkytaikhoan.htm">Đăng Ký</a>
 		</form>
 
-		<h1>ĐƠN HÀNG ĐÃ THANH TOÁN</h1>
+		<h1>GIỎ HÀNG</h1>
 		<form action="">
 			<table id="table">
 				<tr>
@@ -205,8 +203,8 @@ a {
 				<a href="#">Giỏ hàng của tôi</a> <a href="#">Đăng Xuất</a>
 			</div>
 			<div class="cuoigiohang">
-				<a class="gia">Tổng Tiền Thanh Toán : <span id="val"></span> <script
-						type="text/javascript">
+				<a class="gia">Tổng Tiền Thanh Toán : <span id="val"></span>
+				 <script type="text/javascript">
 					var table = document.getElementById("table"), sumVal = 0;
 					for (var i = 1; i < table.rows.length; i++) {
 						sumVal = sumVal

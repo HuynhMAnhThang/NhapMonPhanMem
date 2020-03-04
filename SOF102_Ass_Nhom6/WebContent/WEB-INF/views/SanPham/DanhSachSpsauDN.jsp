@@ -89,6 +89,8 @@ a {
 
 .logo {
 	margin: 0 auto;
+	width: 60px;
+	height: 60px;
 }
 
 .sidenav {
@@ -139,16 +141,15 @@ a {
 
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">Đăng xuất</a> <a href="#">Đơn hàng của tôi</a>
+		<a href="#">Đăng xuất</a> <a href="DonHang/DonHangCuaToi.htm">Đơn hàng của tôi</a>
 	</div>
 	<div class="layout">
-		<form action="" class="timKiem">
-			<a href="#"> <img class="logo" alt="logo" src="img/logo.png"
-				height="60px" width="60px" align="center"></a> <input
-				class="inputTK" type="text" placeholder="Tìm kiếm"> <a
-				href="#"><button class="btGioHang">Giỏ hàng</button></a> <span
-				onclick="openNav()"> <img alt="" class="acout"
-				src="img/dangnhap.png" align="center"> Xin chào
+		<form action="" class="timKiem"   style="padding-left: 100px;">
+			<img onclick="openNav()" class="logo" alt="logo" src="img/logo.png"> 
+			<input class="inputTK" type="text" placeholder="Tìm kiếm"> 
+			
+			<span class="acout" style=" cursor: pointer" onclick="openNav()"> 
+				<img src="img/dangnhap.png"  style="width: 40px;height: 40px;"> Xin chào
 			</span>
 		</form>
 		<h1>Danh Sách Sản Phẩm</h1>

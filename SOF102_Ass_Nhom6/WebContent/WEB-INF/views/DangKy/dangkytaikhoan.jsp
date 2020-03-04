@@ -86,7 +86,7 @@ button:hover {
 </style>
 </head>
 <body>
-	<form:form action="DangKy/dangkytaikhoan.htm" modelAttribute="NguoiDung" style="border: 1px solid #ccc">
+	<form:form action="" modelAttribute="NguoiDung" style="border: 1px solid #ccc">
 		<div class="container">
 		<h1>Đăng Ký Tài Khoản</h1>
 			<p>Vui lòng điền vào mẫu này để tạo một tài khoản.</p>
@@ -108,8 +108,8 @@ button:hover {
 		</div>
 
 		<div class="clearfix">
-			<button type="button" class="dangky">Đăng Ký</button>
-			<button type="submit" class="dangnhap">Đăng Nhập</button>
+			<button type="button" class="dangky"><a href="dangnhap.jsp">Đăng nhập</a></button>
+			<button type="submit" class="dangnhap"><a href="dangnhap.jsp">Đăng Nhập</a></button>
 		</div>
 	</form:form>
 

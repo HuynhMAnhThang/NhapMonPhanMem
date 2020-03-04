@@ -42,5 +42,11 @@ public class DangKyController {
 		}
 		return "DangKy/dangkytaikhoan";
 	}
+	
+	@RequestMapping("dangnhap")
+	public String insert() {
+		return "DangKy/dangnhap";
+	}
+	
 
 }

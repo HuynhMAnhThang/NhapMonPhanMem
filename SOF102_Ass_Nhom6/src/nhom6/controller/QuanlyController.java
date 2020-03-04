@@ -5,16 +5,13 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import javafx.scene.control.CheckBox;
 import nhom6.entity.NguoiDungEntity;
 import nhom6.entity.SanPhamEntity;
 
@@ -51,20 +48,20 @@ public class QuanlyController {
 //			try {
 //				session.delete(nguoidungentity);
 //				t.commit();
-//				model.addAttribute("message", "Xóa thành công !");
+//				model.addAttribute("message", "XÃ³a thÃ nh cÃ´ng !");
 //				model.addAttribute("nguoidung", new NguoiDungEntity());
 //				model.addAttribute("nguoidungs", getNguoiDungs());
 //				return "QuanLy/QuanLyTaiKhoan";
 //			} catch (Exception e) {	
 //				t.rollback();
-//				model.addAttribute("message", "Xóa thất bại !");
+//				model.addAttribute("message", "XÃ³a tháº¥t báº¡i !");
 //			}
 //			finally {
 //				session.close();
 //			}
 //		}
 //		else {
-//			model.addAttribute("message", "Vui lòng chọn tài khoản muốn xóa !");		}			
+//			model.addAttribute("message", "Vui lÃ²ng chá»�n tÃ i khoáº£n muá»‘n xÃ³a !");		}			
 //		return "QuanLy/QuanLyTaiKhoan";
 //	}
 	

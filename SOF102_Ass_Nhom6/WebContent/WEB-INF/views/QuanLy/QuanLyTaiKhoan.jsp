@@ -93,6 +93,8 @@ a {
 
 .logo {
 	margin: 0 auto;
+	width: 60px;
+	height: 60px;
 }
 
 .sidenav {
@@ -174,39 +176,49 @@ label {
 	border-left-width: 0px;
 	margin-left: 20px;
 }
+
+tr th {
+	text-align: center;
+}
+
+tr td {
+	text-align: center;
+}
 </style>
 <script type="text/javascript">
 function openNav1() {
 			document.getElementById("mySidenav1").style.width = "350px";
-		}
+
 </script>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">Đăng xuất</a> <a href="QuanLy/QuanLyTaiKhoan.htm"
-			data-role="disabled">Quản Lý Tài Khoản</a> <a
-			href="QuanLy/QuanLySanPham.htm">Quản Lý Sản Phẩm</a>
+		<a href="#">Đăng xuất</a>
+		 <a href="QuanLy/QuanLyTaiKhoan.htm">Quản Lý Tài Khoản</a> 
+		 <a href="QuanLy/QuanlySanPham.htm">Quản Lý Sản Phẩm</a>
 	</div>
-	<div class="layout">
-		<form action="" class="timKiem">
-			<a href="#"> <img class="logo" alt="logo" src="img/logo.png"
-				height="60px" width="90px" align="center">
-
-			</a> <input class="inputTK" type="text" placeholder="Tìm kiếm"> <span
-				class="acout" style="font-size: 20px; cursor: pointer"
-				onclick="openNav()"> <img alt="" class="acout"
-				src="img/dangnhap.png" align="center"> Xin chào
+	<div class="layout" >
+		<form action="" class="timKiem"   style="padding-left: 100px;">
+			<img onclick="openNav()" class="logo" alt="logo" src="img/logo.png"> 
+			<input class="inputTK" type="text" placeholder="Tìm kiếm"> 
+			
+			<span class="acout" style=" cursor: pointer" onclick="openNav()"> 
+				<img src="img/dangnhap.png"  style="width: 40px;height: 40px;"> Xin chào
 			</span>
 		</form>
 		<h1>QUẢN LÝ TÀI KHOẢN</h1>
 		<form action="">
+			${message}
 			<div class="Xoa">
 				<button class="btXoa">Xóa</button>
 			</div>
-			<table>
+
+			<table class="table table-hover">
 				<tr>
-					<th>Tên tài khoản</th>
+					<th>Họ Và Tên</th>
 					<th>Chức vụ</th>
 					<th>Tên đăng nhập</th>
 					<th>Số điện thoại</th>
@@ -219,11 +231,11 @@ function openNav1() {
 						<td>${a.chucVu}</td>
 						<td>${a.taiKhoan}</td>
 						<td>${a.dienThoai}</td>
-						<td style="text-align: center;">
-						<a href="#"> <button class="btCapNhat" onclick="openNav1()">Cập nhật</button></a>
-							</td>
-						<td style="text-align: center;"><input class="checkbox"
-							type="checkbox"></td>
+						<td><a href="#">
+								<button class="btCapNhat" onclick="openNav1()">Cập nhật</button>
+						</a></td>
+						<td><input class="checkbox" type="checkbox"></td>
+
 					</tr>
 				</c:forEach>
 			</table>

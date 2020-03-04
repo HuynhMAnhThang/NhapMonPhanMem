@@ -137,30 +137,35 @@ a {
 		font-size: 18px;
 	}
 }
+tr th{
+text-align: center;
+}
 </style>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">Đăng Xuất</a> <a href="#">Quản Lý Tài Khoản</a> <a
-			href="#">Quản Lý Sản Phẩm</a>
+		<a href="#">Đăng xuất</a> 
+		<a href="QuanLy/QuanLyTaiKhoan.htm">Quản Lý Tài Khoản</a> 
+		<a href="QuanLy/QuanlySanPham.htm">Quản Lý Sản Phẩm</a>
 	</div>
 	<div class="layout">
-		<form action="" class="timKiem">
-			<a href="#"> <img class="logo" alt="logo" src="img/logo.png"
+		<form action="" class="timKiem" style="padding-left: 100px;">
+			<a href="#"> <img onclick="openNav()" class="logo" alt="logo" src="img/logo.png"
 				height="60px" width="90px" align="center">
 			</a> <input class="inputTK" type="text" placeholder="Tìm kiếm"> <span
 				class="acout" style="font-size: 20px; cursor: pointer"
-				onclick="openNav()"> <img alt="" class="acout"
-				src="img/dangnhap.png" align="center"> Xin chào
+				onclick="openNav()"> <img src="img/dangnhap.png"  style="width: 40px;height: 40px;"> Xin chào
 			</span>
 		</form>
-		<h1>QUẢN LÝ Sản phẩm</h1>
+		<h1>QUẢN LÝ SẢN PHẨM</h1>
 		<form action="">
 			<div class="Xoa">
 				<button class="btXoa">Xóa</button>
 			</div>
-			<table class="table">
+			<table class="table table-hover">
 				<tr style="text-align: center;">
 
 					<th>Mã sản phẩm</th>
@@ -178,9 +183,10 @@ a {
 						<td>${a.donGia}</td>
 						<td>${a.soLuong}</td>
 						<td>${a.moTa}</td>
-						<td style="text-align: center;"><a href="#"><button
-									class="btCapNhat">Cập nhật.</button></a></td>
-						<td style="text-align: center;"><input class="checkbox"
+
+						<td style="text-align: center;">
+						<a href="#"> <button class="btCapNhat" style="width: 100px;">Cập nhật</button></a></td>
+						<td style="magin:0 auto;"><input class="checkbox"
 							type="checkbox"></td>
 					</tr>
 				</c:forEach>

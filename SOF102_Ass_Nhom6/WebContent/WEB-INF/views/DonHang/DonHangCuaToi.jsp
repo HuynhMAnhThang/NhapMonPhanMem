@@ -140,11 +140,12 @@ td {
 <body>
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">Đăng xuất</a> <a href="DonHang/DonHangCuaToi.htm">Đơn hàng của tôi</a>
+		<a href="#">Đăng xuất</a> <a href="DonHang/DonHangCuaToi.htm">Đơn
+			hàng của tôi</a>
 	</div>
 	<div class="layout">
 		<form action="" class="timKiem">
-			<img alt="logo" src="img/logo.png" height="60px" width="60px"
+			<img onclick="openNav()" alt="logo" src="img/logo.png" height="60px" width="60px"
 				align="center"> <input class="inputTK" type="text"
 				placeholder="Tìm kiếm"> <a href="#"><button
 					class="btGioHang">Giỏ hàng</button></a> <span class="acout"
@@ -154,8 +155,11 @@ td {
 			</span>
 		</form>
 		<h1>ĐƠN HÀNG ĐÃ THANH TOÁN</h1>
+
+
 		<form action="">
-			<table>
+			<table id="table">
+
 				<tr>
 					<th>Stt</th>
 					<th>Tên sản phẩm</th>
@@ -165,36 +169,40 @@ td {
 					<th>Thành tiền</th>
 					<th>Lựa chọn</th>
 				</tr>
-				<c:forEach var="b" items="${HDCT}">
-					<!-- 					<tr> -->
-					<!-- 						<td style="text-align: center;"></td> -->
-					<!-- 						<td style="text-align: center;"></td> -->
-					<!-- 						<td style="text-align: center;"></td> -->
-					<%-- 						<td style="text-align: center;">${b.donGia} đ</td> --%>
-					<%-- 						<td style="text-align: center;">${b.soLuong}</td> --%>
-					<%-- 						<td style="text-align: center;">${b.donGia * b.soLuong} đ</td> --%>
-					<!-- 						<td style="text-align: center;"> -->
-					<!-- 							<input class="checkbox" type="checkbox"> -->
-					<!-- 						</td> -->
-					<!-- 					</tr> -->
-				</c:forEach>
-				<!-- 				<tr> -->
-				<!-- 					<td style="text-align: center;">1</td> -->
-				<!-- 					<td style="text-align: center;">Thịt bò</td> -->
-				<!-- 					<td style="text-align: center;">Thịt mông tươi ngon</td> -->
-				<!-- 					<td style="text-align: center;">12 $</td> -->
-				<!-- 					<td style="text-align: center;">1</td> -->
-				<!-- 					<td style="text-align: center;">12 $</td> -->
-				<!-- 					<td style="text-align: center;"> -->
-				<!-- 						<input class="checkbox" type="checkbox"> -->
-				<!-- 					</td> -->
-				<!-- 				</tr> -->
+
+<%-- 				<c:forEach var="b" items="${HDCT}"> --%>
+<!-- 										<tr> -->
+<!-- 											<td style="text-align: center;"></td> -->
+<!-- 											<td style="text-align: center;"></td> -->
+<!-- 											<td style="text-align: center;"></td> -->
+<%-- 											<td style="text-align: center;">${b.donGia} đ</td> --%>
+<%-- 											<td style="text-align: center;">${b.soLuong}</td> --%>
+<%-- 											<td style="text-align: center;">${b.donGia * b.soLuong} đ</td> --%>
+<!-- 											<td style="text-align: center;"> -->
+<!-- 												<input class="checkbox" type="checkbox"> -->
+<!-- 											</td> -->
+<!-- 										</tr> -->
+
+
+<%-- 				</c:forEach> --%>
+<!-- 								<tr> -->
+<!-- 									<td style="text-align: center;">1</td> -->
+<!-- 									<td style="text-align: center;">Thịt bò</td> -->
+<!-- 									<td style="text-align: center;">Thịt mông tươi ngon</td> -->
+<!-- 									<td style="text-align: center;">12 $</td> -->
+<!-- 									<td style="text-align: center;">1</td> -->
+<!-- 									<td style="text-align: center;">12 $</td> -->
+<!-- 									<td style="text-align: center;"> -->
+<!-- 										<input class="checkbox" type="checkbox"> -->
+<!-- 									</td> -->
+<!-- 								</tr> -->
 			</table>
 			<hr>
 			<div class="thanhToan">
-				Tổng tiền đã thanh toán:<span>12</span> $
+				Tổng tiền đã thanh toán:<span id="val"></span> đ
 				<button class="btXoa">Xóa</button>
 			</div>
+		
 		</form>
 	</div>
 	<script>
@@ -204,6 +212,11 @@ td {
 
 		function closeNav() {
 			document.getElementById("mySidenav").style.width = "0";
+		}
+		var table = document.getElementById("table"), sumVal;
+		for (var i = 0; i < table.rows.length; i++) {
+			sumval = sumval + parseInt(table.rows[i].cells[5].innerHTML);
+			document.getElementById("val").innerHTML = sumval;
 		}
 	</script>
 </body>

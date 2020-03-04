@@ -151,7 +151,7 @@
                         <th>Tên sản phẩm</th>
                         <th>Giá</th>
                         <th>Số Lượng</th>
-                         <th>Mô tả</th>
+                         <th>Mô tả.</th>
                         <th>Sửa đổi thông tin</th>
                         <th>Lựa Chọn </th>
                     </tr>

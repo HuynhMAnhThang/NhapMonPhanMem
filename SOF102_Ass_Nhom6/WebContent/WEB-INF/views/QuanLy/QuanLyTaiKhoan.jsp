@@ -232,7 +232,7 @@ function openNav1() {
 						<td>${a.taiKhoan}</td>
 						<td>${a.dienThoai}</td>
 						<td><a href="#">
-								<button class="btCapNhat" onclick="openNav1()">Cập nhật</button>
+								<button><a href="CapNhatTaiKhoan.jsp">Cập nhật</a></button>
 						</a></td>
 						<td><input class="checkbox" type="checkbox"></td>
 

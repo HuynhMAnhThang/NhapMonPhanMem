@@ -29,6 +29,6 @@ public class GioHangSController {
 		model.addAttribute("SanPham", list);
 		return "GioHang/GioHangSauDN";
 		
-		//abc
+		
 	}
 }

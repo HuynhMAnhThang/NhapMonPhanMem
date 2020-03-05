@@ -28,6 +28,7 @@ public class GioHangSController {
 		List<SanPhamEntity> list = query.list();
 		model.addAttribute("SanPham", list);
 		return "GioHang/GioHangSauDN";
-
+		
+		//abc
 	}
 }

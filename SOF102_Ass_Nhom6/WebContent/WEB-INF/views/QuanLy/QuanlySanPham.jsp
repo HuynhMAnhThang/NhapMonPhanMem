@@ -4,148 +4,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-<base href="${pageContext.servletContext.contextPath}/">
-<meta charset="utf-8">
-<title>Quản lý tài khoản</title>
-<style type="text/css">
-.layout {
-	width: 1080px;
-	height: 800px;
-	margin: 0 auto;
-	margin-top: -7px;
-	background-color: #FAEBD7;
-}
-
-body {
-	background-image: url("img/1.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-}
-
-.inputTK {
-	background-image: url("img/searchicon.png");
-	background-position: 6px 5px;
-	background-repeat: no-repeat;
-	background-size: 7%;
-	width: 400px;
-	border-radius: 20px;
-	border: 1px solid #ddd;
-	padding: 12px 20px 12px 40px;
-}
-
-.acout {
-	padding-left: 40px;
-	width: 40px;
-	height: 40px;
-}
-
-.timKiem {
-	padding-top: 50px;
-	width: 900px;
-	margin: 0 auto;
-}
-
-th {
-	width: 100px;
-}
-
-td {
-	text-align: center;
-	padding-top: 30px;
-}
-
-.tennguoidung {
-	text-align: left;
-}
-
-.checkbox {
-	
-}
-
-h1 {
-	padding-top: 50px;
-	padding-right: 50px;
-	text-align: center;
-}
-
-table {
-	width: 900px;
-	margin: 0 auto;
-}
-
-.Xoa {
-	padding-bottom: 10px;
-	padding-left: 880px;
-}
-
-button {
-	width: 70px;
-	height: 25px;
-	background-color: orange;
-	border-radius: 5px;
-	border: 1px;
-}
-
-a {
-	color: black;
-	text-decoration: none;
-}
-
-.logo {
-	margin: 0 auto;
-	width: 60px;
-	height: 60px;
-}
-
-.sidenav {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #111;
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 60px;
-}
-
-.sidenav a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
-}
-
-.sidenav a:hover {
-	color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-	.sidenav {
-		padding-top: 15px;
-	}
-	.sidenav a {
-		font-size: 18px;
-	}
-}
-
-tr th {
-	text-align: center;
-}
-</style>
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<script src="js/bootstrap.min.js"></script>
+	<base href="${pageContext.servletContext.contextPath}/">
+	<meta charset="utf-8">
+	<title>Quản lý sản phẩm</title>
+	<style type="text/css">
+		.layout {
+			width: 1080px;
+			height: 800px;
+			margin: 0 auto;
+			margin-top: -7px;
+			background-color: #FAEBD7;
+		}
+		
+		body {
+			background-image: url("img/1.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+		
+		.inputTK {
+			background-image: url("img/searchicon.png");
+			background-position: 6px 5px;
+			background-repeat: no-repeat;
+			background-size: 7%;
+			width: 400px;
+			border-radius: 20px;
+			border: 1px solid #ddd;
+			padding: 12px 20px 12px 40px;
+		}
+		
+		.acout {
+			padding-left: 40px;
+			width: 40px;
+			height: 40px;
+		}
+		
+		.timKiem {
+			padding-top: 50px;
+			width: 900px;
+			margin: 0 auto;
+		}
+		
+		th {
+			width: 100px;
+		}
+		
+		td {
+			text-align: center !important;
+			padding-top: 30px;
+		}
+		
+		.tennguoidung {
+			text-align: center;
+		}
+		
+		.checkbox {
+			
+		}
+		
+		h1 {
+			padding-top: 50px;
+			padding-right: 50px;
+			text-align: center;
+		}
+		
+		table {
+			width: 900px !important;
+			margin: 0 auto !important;
+		}
+		
+		.Xoa {
+			padding-bottom: 10px;
+			padding-left: 900px;
+		}
+		
+		button {
+			width: 70px;
+			height: 25px;
+			background-color: orange;
+			border-radius: 5px;
+			border: 1px;
+		}
+		
+		a {
+			color: black;
+			text-decoration: none;
+		}
+		
+		.logo {
+			margin: 0 auto;
+			width: 60px;
+			height: 60px;
+		}
+		
+		.sidenav {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+		}
+		
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 25px;
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+		}
+		
+		.sidenav a:hover {
+			color: #f1f1f1;
+		}
+		
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+		
+		@media screen and (max-height: 450px) {
+			.sidenav {
+				padding-top: 15px;
+			}
+			.sidenav a {
+				font-size: 18px;
+			}
+		}
+		
+		tr th {
+			text-align: center;
+		}
+	</style>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="mySidenav" class="sidenav">
@@ -186,12 +186,14 @@ tr th {
 						<td>${a.soLuong}</td>
 						<td>${a.moTa}</td>
 
-						<td style="text-align: center;"><a href="#">
-								<button class="btCapNhat" style="width: 100px;">Cập
-									nhật</button>
-						</a></td>
-						<td style="magin: 0 auto;"><input class="checkbox"
-							type="checkbox"></td>
+						<td style="text-align: center;">
+							<a href="#">
+								<button class="btCapNhat" style="width: 100px;">Cập nhật</button>
+							</a>
+						</td>
+						<td style="magin: 0 auto;">
+							<input class="checkbox" type="checkbox">
+						</td>
 					</tr>
 				</c:forEach>
 			</table>

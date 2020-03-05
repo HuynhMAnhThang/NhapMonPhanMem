@@ -147,7 +147,8 @@ a {
 		<form action="" class="timKiem"   style="padding-left: 100px;">
 			<img onclick="openNav()" class="logo" alt="logo" src="img/logo.png"> 
 			<input class="inputTK" type="text" placeholder="Tìm kiếm"> 
-			
+			<a href="#"><button
+					class="btGioHang">Giỏ hàng</button></a>
 			<span class="acout" style=" cursor: pointer" onclick="openNav()"> 
 				<img src="img/dangnhap.png"  style="width: 40px;height: 40px;"> Xin chào
 			</span>
@@ -168,7 +169,7 @@ a {
 						<td>${a.donGia}</td>
 
 						<td style="text-align: center;"><a href="#"><button
-									class="btthem">Thêm Vào Giỏ Hàng</button></a></td>
+									class="btthem" onclick ="add()">Thêm Vào Giỏ Hàng</button></a></td>
 
 					</tr>
 				</c:forEach>
@@ -182,6 +183,9 @@ a {
 
 		function closeNav() {
 			document.getElementById("mySidenav").style.width = "0";
+		}
+		function add(){
+			alert("Đã thêm vào giỏ hàng ");
 		}
 	</script>
 </body>

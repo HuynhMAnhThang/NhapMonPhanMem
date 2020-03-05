@@ -23,7 +23,7 @@ body {
 }
 
 .inputTK {
-	background-image: url("img/searchicon.png");
+	background-image: url("img/iconsearch.png");
 	background-position: 6px 5px;
 	background-repeat: no-repeat;
 	background-size: 7%;

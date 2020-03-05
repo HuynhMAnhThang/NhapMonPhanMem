@@ -186,6 +186,7 @@
 						<td>${a.soLuong}</td>
 						<td>${a.moTa}</td>
 
+
 						<td style="text-align: center;">
 							<a href="#">
 								<button class="btCapNhat" style="width: 100px;">Cập nhật</button>
@@ -194,6 +195,12 @@
 						<td style="magin: 0 auto;">
 							<input class="checkbox" type="checkbox">
 						</td>
+
+						<td style="text-align: center;"><a href="#">
+								<button class="btCapNhat" style="width: 100px;"><a href="CapNhatSanPham.jsp">Cập nhật</a></button>
+						</a></td>
+						<td style="magin: 0 auto;"><input class="checkbox"
+							type="checkbox"></td>
 					</tr>
 				</c:forEach>
 			</table>

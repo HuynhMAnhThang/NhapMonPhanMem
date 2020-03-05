@@ -75,8 +75,8 @@ charset=utf-8"
 							<a href="SanPham/DanhSachSpsauDN.htm">Đăng Nhập</a>
 						</button>
 						
-						<button class="login100-form-btn"><a href="DangKy/dangkytaikhoan.htm">Đăng Kí</button>
-						</a>
+						<button class="login100-form-btn"><a href="DangKy/dangkytaikhoan.htm">Đăng Kí</a></button>
+						
 					</div>
 				</form>
 			</div>
